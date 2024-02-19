@@ -11,9 +11,9 @@ class RenderReport extends React.Component<any, any> {
     renderReportComponent = () => {
         switch (this.props.template) {
             case "patient-report":
-                return <PDFViewer><PatinetInfo /></PDFViewer>;
+                return <PDFViewer><PatinetInfo templateData={this.props.templateData}/></PDFViewer>;
             case "physician-report":
-                return <PDFViewer><PhysicianInfo /></PDFViewer>;
+                return <PDFViewer><PhysicianInfo templateData={this.props.templateData}/></PDFViewer>;
         }
     };
 
