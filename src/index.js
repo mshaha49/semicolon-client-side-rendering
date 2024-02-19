@@ -5,6 +5,11 @@ import Home from './components/Home'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// Use below code to fetch parameters from URL
+/*const search = window.location.search;
+const params = new URLSearchParams(search);
+const templateId = params.get('templateId');
+console.log(templateId)*/
 root.render(
   <React.StrictMode>
     <Home />

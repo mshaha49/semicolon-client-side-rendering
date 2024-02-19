@@ -15,8 +15,10 @@ const styles = StyleSheet.create({
   
 class PatinetInfo extends React.Component<any, any> {
 
+    templateDataObj: any
     constructor(props: any) {
         super(props);
+        this.templateDataObj = JSON.parse(this.props.templateData)
     }
 
     render() {
@@ -24,10 +26,10 @@ class PatinetInfo extends React.Component<any, any> {
             <Document>
             <Page size="A4" style={styles.page}>
               <View style={styles.section}>
-                <Text>Section #1 Patient Info</Text>
+                <Text>Patient Name is {this.templateDataObj.name}</Text>
               </View>
               <View style={styles.section}>
-                <Text>Section #2 Patinet Info</Text>
+                <Text>Patinet Address is {this.templateDataObj.address}</Text>
               </View>
             </Page>
           </Document>
