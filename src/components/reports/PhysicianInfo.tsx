@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     }
   });
   
-class PatinetInfo extends React.Component<any, any> {
+class PhysicianInfo extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
@@ -24,10 +24,10 @@ class PatinetInfo extends React.Component<any, any> {
             <Document>
             <Page size="A4" style={styles.page}>
               <View style={styles.section}>
-                <Text>Section #1 Patient Info</Text>
+                <Text>Section #1 Physician Info</Text>
               </View>
               <View style={styles.section}>
-                <Text>Section #2 Patinet Info</Text>
+                <Text>Section #2 Physician Info</Text>
               </View>
             </Page>
           </Document>
@@ -35,4 +35,4 @@ class PatinetInfo extends React.Component<any, any> {
     }
 }
 
-export default PatinetInfo;
+export default PhysicianInfo;

@@ -1,17 +1,25 @@
 import * as React from 'react';
 import { PDFViewer } from '@react-pdf/renderer';
 import PatinetInfo from './PatientInfo';
+import PhysicianInfo from './PhysicianInfo';
 
 class RenderReport extends React.Component<any, any> {
     constructor(props: any) {
         super(props);
     }
 
+    renderReportComponent = () => {
+        switch (this.props.template) {
+            case "patient-report":
+                return <PDFViewer><PatinetInfo /></PDFViewer>;
+            case "physician-report":
+                return <PDFViewer><PhysicianInfo /></PDFViewer>;
+        }
+    };
+
     render() {
         return (
-            <PDFViewer>
-                <PatinetInfo />
-            </PDFViewer>
+            this.renderReportComponent()
         )
     }
 }
